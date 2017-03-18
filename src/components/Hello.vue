@@ -14,12 +14,19 @@
     <label for="name">First Name</label><input type="text" name="name" v-model="user.name">
     <label for="age">Age</label><input type="text" name="age" v-model="user.age">
     <h3>{{ userProfile }}</h3>
+    <h2>{{ msg }}</h2>
   </div>
 </template>
 
 <script>
 export default {
   name: 'hello',
+  props: {
+    msg: {
+      type: String,
+      default: 'Default msg'
+    }
+  },
   data () {
     return {
       title: 'Hello World',
